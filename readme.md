@@ -13,6 +13,17 @@ Fullstack project starter kit
 - ESLint
 - Prettier
 
+## Usage
+
+- Clone this repository
+
+```shell
+$ git clone https://github.com/sheshbabu/starterkit.git your-project-name
+```
+
+- Replace references to "starterkit" with `your-project-name`
+- Delete the code for features you don't need
+
 ## Local development
 
 Prerequisites:
@@ -23,4 +34,10 @@ Start the containers
 
 ```shell
 $ docker-compose up -d
+```
+
+## Production
+
+```shell
+$ docker-compose -f docker-compose.yml up
 ```
