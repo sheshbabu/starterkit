@@ -2,22 +2,18 @@ version: "3"
 
 services:
   starterkit:
+    # Replace this with image from registry
     build: .
     ports:
-      - "3000:3000"
-      - "3001:3001"
-    volumes:
-      - ./src/client:/app/src/client
-      - ./src/server:/app/src/server
+      - "80:3001"
     environment:
       - DATABASE_URL=postgres://postgres:hunter2@db:5432/starterkit
+    command: npm start
     depends_on:
       - db
 
   db:
     image: postgres:11.3
-    ports:
-      - 5432:5432
     environment:
       - POSTGRES_PASSWORD=hunter2
       - POSTGRES_DB=starterkit
