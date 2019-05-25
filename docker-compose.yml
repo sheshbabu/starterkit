@@ -19,3 +19,5 @@ services:
     environment:
       - POSTGRES_PASSWORD=hunter2
       - POSTGRES_DB=starterkit
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
