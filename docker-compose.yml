@@ -3,7 +3,9 @@ version: "3"
 services:
   starterkit:
     # Replace this with image from registry
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
     ports:
       - "80:3001"
     environment:
