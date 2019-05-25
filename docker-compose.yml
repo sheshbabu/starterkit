@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  starterkit:
+    build: .
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - ./src/client:/app/src/client
+      - ./src/server:/app/src/server
+    environment:
+      - DATABASE_URL=postgres://postgres:hunter2@db:5432/starterkit
+    depends_on:
+      - db
+
+  db:
+    image: postgres:11.3
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=hunter2
+      - POSTGRES_DB=starterkit
