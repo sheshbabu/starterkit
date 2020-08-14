@@ -17,7 +17,9 @@
     "migrate:dry": "node-pg-migrate -m ./src/server/migrations -j sql up",
     "migrate:create": "node-pg-migrate -m ./src/server/migrations -j sql create",
     "lint": "eslint --ext .ts,.tsx .",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -44,7 +46,8 @@
     "react-dom": "16.8.6",
     "semantic-ui-calendar-react": "0.15.0",
     "semantic-ui-css": "2.4.1",
-    "semantic-ui-react": "0.86.0"
+    "semantic-ui-react": "0.86.0",
+    "snyk": "^1.374.0"
   },
   "devDependencies": {
     "@types/compression": "0.0.36",
@@ -75,5 +78,6 @@
     "webpack": "4.32.2",
     "webpack-cli": "3.3.2",
     "webpack-dev-server": "3.4.1"
-  }
+  },
+  "snyk": true
 }
