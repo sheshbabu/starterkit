@@ -47,7 +47,7 @@
     "semantic-ui-calendar-react": "0.15.0",
     "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "0.86.0",
-    "snyk": "^1.374.0"
+    "snyk": "^1.685.0"
   },
   "devDependencies": {
     "@types/compression": "0.0.36",
